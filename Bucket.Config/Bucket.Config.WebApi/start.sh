@@ -1,0 +1,1 @@
+dotnet Bucket.Config.WebApi.dll --server.urls http://*:18081 --environment Production

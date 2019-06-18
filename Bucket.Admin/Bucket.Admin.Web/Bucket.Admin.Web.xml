@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bucket.Admin.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Bucket.Admin.Web.Controllers.ApiController">
+            <summary>
+            WebApi接口资源管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ApiController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory,AutoMapper.IMapper)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ApiController.QueryApiList(Bucket.Admin.Dto.Api.QueryApiListInput)">
+            <summary>
+            查询Api资源
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ApiController.SetApi(Bucket.Admin.Dto.Api.SetApiInput)">
+            <summary>
+            设置Api资源
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.ConfigController">
+            <summary>
+            配置中心管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ConfigController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory,AutoMapper.IMapper,Bucket.Core.IUser,Bucket.Admin.Infrastructure.IConfigService,Bucket.Listener.Abstractions.IPublishCommand)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+            <param name="mapper"></param>
+            <param name="user"></param>
+            <param name="configService"></param>
+            <param name="networkCommand"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ConfigController.QueryAppList">
+            <summary>
+            查看所有项目组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ConfigController.SetAppInfo(Bucket.Admin.Dto.Config.SetAppInfoInput)">
+            <summary>
+            设置项目组信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ConfigController.QueryAppProjectList(Bucket.Admin.Dto.Config.QueryAppProjectListInput)">
+            <summary>
+            查询配置项目
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ConfigController.SetAppProjectInfo(Bucket.Admin.Dto.Config.SetAppProjectInfoInput)">
+            <summary>
+            设置配置项目
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ConfigController.QueryAppConfigList(Bucket.Admin.Dto.Config.QueryAppConfigListInput)">
+            <summary>
+            查询配置信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ConfigController.SetAppConfigInfo(Bucket.Admin.Dto.Config.SetAppConfigInfoInput)">
+            <summary>
+            设置配置信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ConfigController.PublishConfigNetworkCommand(Bucket.Admin.Dto.Config.PublishConfigNetworkCommandInput)">
+            <summary>
+            推送配置中心网络命令
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.HomeController">
+            <summary>
+            Home Index
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.HomeController.Index(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Index
+            </summary>
+            <param name="hostingEnvironment"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.LoggingController">
+            <summary>
+            日志管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.LoggingController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.LoggingController.QueryLogList(Bucket.Admin.Dto.Logging.QueryLogListInput)">
+            <summary>
+            查询日志列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.MenuController">
+            <summary>
+            菜单管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MenuController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory,AutoMapper.IMapper,Bucket.Core.IUser)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+            <param name="mapper"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MenuController.QueryAllMenus(Bucket.Admin.Dto.Menu.QueryAllMenusInput)">
+            <summary>
+            查询平台菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MenuController.SetPlatform(Bucket.Admin.Dto.Menu.SetMenuInput)">
+            <summary>
+            设置平台菜单信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MenuController.QueryUserMenus(Bucket.Admin.Dto.Menu.QueryUserMenuInput)">
+            <summary>
+            查询用户菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.MicroserviceController">
+            <summary>
+            微服务管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory,Bucket.ServiceDiscovery.IServiceDiscovery,Bucket.Caching.Abstractions.ICachingProviderFactory)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+            <param name="serviceDiscovery"></param>
+            <param name="cachingProviderFactory"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.QueryServiceList(Bucket.Admin.Dto.Microservice.QueryServiceListInput)">
+            <summary>
+            查询服务发现全部服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.SetServiceInfo(Bucket.Admin.Dto.Microservice.SetServiceInfoInput)">
+            <summary>
+            服务注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.DeleteService(Bucket.Admin.Dto.Microservice.DeleteServiceInput)">
+            <summary>
+            服务移除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.QueryApiGatewayConfiguration(Bucket.Admin.Dto.Microservice.QueryApiGatewayConfigurationInput)">
+            <summary>
+            查询网关配置列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.SetApiGatewayConfiguration(Bucket.Admin.Dto.Microservice.SetApiGatewayConfigurationInput)">
+            <summary>
+            设置网关配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.QueryApiGatewayReRouteList(Bucket.Admin.Dto.Microservice.QueryApiGatewayReRouteListInput)">
+            <summary>
+            查询网关路由列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.SetApiGatewayReRoute(Bucket.Admin.Dto.Microservice.SetApiGatewayReRouteInput)">
+            <summary>
+            设置网关路由
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.SyncApiGatewayConfigurationToConsul(Bucket.Admin.Dto.Microservice.SyncApiGatewayConfigurationInput)">
+            <summary>
+            同步网关配置到Consul
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.SyncApiGatewayConfigurationToRedis(Bucket.Admin.Dto.Microservice.SyncApiGatewayConfigurationInput)">
+            <summary>
+            同步网关配置到Redis
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.MicroserviceController.GetGatewayData(System.Int32)">
+            <summary>
+            查询网关配置数据
+            </summary>
+            <param name="gatewayId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.PlatformController">
+            <summary>
+            平台管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.PlatformController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory,AutoMapper.IMapper)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.PlatformController.QueryPlatforms">
+            <summary>
+            查询平台列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.PlatformController.SetPlatform(Bucket.Admin.Dto.Platform.SetPlatformInput)">
+            <summary>
+            设置平台信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.ProjectController">
+            <summary>
+            项目管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ProjectController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory,AutoMapper.IMapper,Bucket.Listener.Abstractions.IPublishCommand,Bucket.Core.IUser)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+            <param name="mapper"></param>
+            <param name="networkCommand"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ProjectController.QueryProject">
+            <summary>
+            查看项目列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ProjectController.SetProject(Bucket.Admin.Dto.Project.SetProjectInput)">
+            <summary>
+            设置项目信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.ProjectController.PublishCommand(Bucket.Admin.Dto.Project.PublishCommandInput)">
+            <summary>
+            推送项目信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.RoleController">
+            <summary>
+            角色管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.RoleController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory,AutoMapper.IMapper)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.RoleController.QueryAllRoles(Bucket.Admin.Dto.Role.QueryRolesInput)">
+            <summary>
+            查询所有角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.RoleController.QueryRoles(Bucket.Admin.Dto.Role.QueryRolesInput)">
+            <summary>
+            查询可用角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.RoleController.QueryRoleInfo(Bucket.Admin.Dto.Role.QueryRoleInfoInput)">
+            <summary>
+            查询角色权限信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.RoleController.SetRole(Bucket.Admin.Dto.Role.SetRoleInput)">
+            <summary>
+            设置角色信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Controllers.UserController">
+            <summary>
+            用户管理
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.UserController.QueryUsers(Bucket.Admin.Dto.User.QueryUsersInput)">
+            <summary>
+            查询用户列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Admin.Web.Controllers.UserController.SetUser(Bucket.Admin.Dto.User.SetUserInput)">
+            <summary>
+            设置用户信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Admin.Web.Program">
+            <summary>
+            应用程序
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Program.Main(System.String[])">
+            <summary>
+            应用程序入口点
+            </summary>
+            <param name="args">入口点参数</param>
+        </member>
+        <member name="T:Bucket.Admin.Web.Startup">
+            <summary>
+            启动配置
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            初始化启动配置
+            </summary>
+            <param name="configuration">配置</param>
+        </member>
+        <member name="P:Bucket.Admin.Web.Startup.Configuration">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            配置服务
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            配置请求管道
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:Bucket.Admin.Web.Startup.ConfigSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            配置Swagger
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Startup.CommonConfig(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            公共配置
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Web.Startup.ConfigRoute(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            路由配置,支持区域
+            </summary>
+        </member>
+    </members>
+</doc>

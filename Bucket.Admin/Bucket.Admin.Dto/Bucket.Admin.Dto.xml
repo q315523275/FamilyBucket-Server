@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bucket.Admin.Dto</name>
+    </assembly>
+    <members>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.Id">
+            <summary>
+            资源唯一标示符
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.Url">
+            <summary>
+            资源Uri
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.Method">
+            <summary>
+            请求方式(GET,POST)
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.Message">
+            <summary>
+            资源描述
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.Controller">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.ControllerName">
+            <summary>
+            控制器名称
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.Disabled">
+            <summary>
+            是否禁用
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.AllowScope">
+            <summary>
+            是否允许匿名访问
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Api.SetApiInput.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:Bucket.Admin.Dto.BaseOutput">
+            <summary>
+            返回基类
+            </summary>
+        </member>
+        <member name="T:Bucket.Admin.Dto.BaseOutput`1">
+            <summary>
+            返回基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Bucket.Admin.Dto.BasePageInput">
+            <summary>
+            分页入参基类
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.BasePageInput.PageIndex">
+            <summary>
+            当前分页
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.BasePageInput.PageSize">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="T:Bucket.Admin.Dto.BasePageOutput">
+            <summary>
+            分页返回基类
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.BasePageOutput.CurrentPage">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.BasePageOutput.Total">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="T:Bucket.Admin.Dto.BasePageOutput`1">
+            <summary>
+            分页返回基类
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.BasePageOutput`1.CurrentPage">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.BasePageOutput`1.Total">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Config.SetAppConfigInfoInput.Environment">
+            <summary>
+            环境
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.QueryAllMenusInput.PlatformId">
+            <summary>
+            平台Id,(0所有平台)
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.SetMenuInput.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.SetMenuInput.PlatformId">
+            <summary>
+            平台编号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.SetMenuInput.ParentId">
+            <summary>
+            父编号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.SetMenuInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.SetMenuInput.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.SetMenuInput.LinkUrl">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.SetMenuInput.SortId">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Menu.SetMenuInput.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Project.SetProjectInput.Code">
+            <summary>
+            平台Key
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Project.SetProjectInput.Name">
+            <summary>
+            应用平台
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Project.SetProjectInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Project.SetProjectInput.RouteKey">
+            <summary>
+            路由前缀
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.QueryRolesInput.PlatformKey">
+            <summary>
+            平台标识
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleApiInput.RoleId">
+            <summary>
+            角色Id 
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleApiInput.ApiIdList">
+            <summary>
+            接口数组
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.Id">
+            <summary>
+            角色唯一标示符
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.PlatformKey">
+            <summary>
+            平台名称
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.Key">
+            <summary>
+            角色唯一标示符
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.Name">
+             <summary>
+            角色名称
+             </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.IsDel">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.IsSys">
+            <summary>
+            是否系统角色
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.MenuIdList">
+            <summary>
+            菜单数组
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleInput.ApiIdList">
+            <summary>
+            接口数组
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleMenuInput.RoleId">
+            <summary>
+            角色Id 
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.Role.SetRoleMenuInput.MenuIdList">
+            <summary>
+            菜单数组
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUserDto.Id">
+            <summary>
+            udcid 
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUserDto.UserName">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUserDto.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUserDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUserDto.State">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUserDto.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUserDto.RoleList">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUsersInput.State">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUsersInput.UserName">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUsersInput.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUsersInput.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUsersInput.PlatformKey">
+            <summary>
+            平台名称
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.QueryUsersInput.RoleId">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.Id">
+            <summary>
+            udcid 
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.UserName">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.Password">
+            <summary>
+            账号密码
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.State">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.Salt">
+            <summary>
+            盐值
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Bucket.Admin.Dto.User.SetUserInput.RoleIdList">
+            <summary>
+            角色数组
+            </summary>
+        </member>
+        <member name="T:Bucket.Admin.Dto.MobileAttribute">
+            <summary>
+            对象不能为空
+            </summary>
+        </member>
+        <member name="M:Bucket.Admin.Dto.MobileAttribute.IsMobile(System.String)">
+            <summary>
+            是否为手机号
+            </summary>
+        </member>
+        <member name="T:Bucket.Admin.Dto.NotEmptyAttribute">
+            <summary>
+            对象不能为空
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "Bucket.Admin.WebApi",
+      "script": "start.sh",
+      "watch": false,
+      "ignore_watch": [],
+      "out_file": "/pinzhi/logs/Bucket.Admin.WebApi_out.log",
+      "error_file": "/pinzhi/logs/Bucket.Admin.WebApi_error.log",
+      "max_memory_restart": "1G"
+    }
+  ]
+}
