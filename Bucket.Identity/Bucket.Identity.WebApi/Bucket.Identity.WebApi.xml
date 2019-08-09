@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bucket.Identity.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Bucket.Identity.WebApi.Controllers.AuthController">
+            <summary>
+            账户登录
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Controllers.AuthController.#ctor(Bucket.DbContext.SqlSugar.ISqlSugarDbContextFactory,Bucket.Core.IUser,Bucket.Caching.Abstractions.ICachingProviderFactory,Bucket.Identity.IServices.IAuthService)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sqlSugarDbContextFactory"></param>
+            <param name="user"></param>
+            <param name="cachingProviderFactory"></param>
+            <param name="authService"></param>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Controllers.AuthController.LoginAsync(Bucket.Identity.Dto.Auth.LoginInput)">
+            <summary>
+            账户登陆 - 密码登陆
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Controllers.AuthController.SendSmsCodeAsync(Bucket.Identity.Dto.Auth.SendSmsCodeInput)">
+            <summary>
+            账户登陆 - 发送登陆验证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Controllers.AuthController.RefreshToken">
+            <summary>
+            刷新token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Identity.WebApi.Controllers.ToolController">
+            <summary>
+            工具
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Controllers.ToolController.#ctor(Bucket.Caching.Abstractions.ICachingProviderFactory,Bucket.Config.IConfig)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="cachingProviderFactory"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Controllers.ToolController.ValidateCode(System.String,System.Int32,System.Int32)">
+            <summary>
+            图形验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bucket.Identity.WebApi.Program">
+            <summary>
+            应用程序
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Program.Main(System.String[])">
+            <summary>
+            应用程序入口点
+            </summary>
+            <param name="args">入口点参数</param>
+        </member>
+        <member name="T:Bucket.Identity.WebApi.Startup">
+            <summary>
+            启动配置
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            初始化启动配置
+            </summary>
+            <param name="configuration">配置</param>
+        </member>
+        <member name="P:Bucket.Identity.WebApi.Startup.Configuration">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            配置服务
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            配置请求管道
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Startup.ConfigSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            配置Swagger
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Startup.CommonConfig(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            公共配置
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Startup.ConfigRoute(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            路由配置,支持区域
+            </summary>
+        </member>
+        <member name="M:Bucket.Identity.WebApi.Startup.Welcome">
+            <summary>
+            Welcome
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

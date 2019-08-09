@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bucket.Authorize" Version="1.2.0.1" />
+    <PackageReference Include="Bucket.Core" Version="1.2.0.1" />
+    <PackageReference Include="Bucket.DbContext" Version="1.2.1.3" />
+    <PackageReference Include="Bucket.Utility" Version="1.2.0.4" />
+    <PackageReference Include="Bucket.Caching.StackExchangeRedis" Version="1.2.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bucket.Identity.IServices\Bucket.Identity.IServices.csproj" />
+    <ProjectReference Include="..\Bucket.Identity.Model\Bucket.Identity.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Http">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.http\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
