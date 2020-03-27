@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bucket.Authorize" Version="1.2.0.1" />
+    <PackageReference Include="Bucket.Caching" Version="1.2.0.1" />
     <PackageReference Include="Bucket.Core" Version="1.2.0.1" />
+    <PackageReference Include="Bucket.Utility" Version="1.2.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>

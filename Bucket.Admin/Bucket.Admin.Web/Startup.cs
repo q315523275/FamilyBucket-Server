@@ -22,8 +22,6 @@ using Bucket.LoadBalancer.Extensions;
 using Bucket.Logging.Events;
 using Bucket.ServiceDiscovery.Consul.Extensions;
 using Bucket.ServiceDiscovery.Extensions;
-using Bucket.SkyApm.Agent.AspNetCore;
-using Bucket.SkyApm.Transport.EventBus;
 using Bucket.Utility;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -68,6 +66,8 @@ namespace Bucket.Admin.Web
             {
                 // 添加AspNetCore基础服务
                 familyBucket.AddAspNetCore();
+                // 添加授权认证Token参数
+                familyBucket.Services.AddTokenJwtAuthorize(Configuration);
                 // 添加授权认证
                 familyBucket.AddApiJwtAuthorize().UseAuthoriser(builder => { builder.UseMySqlAuthorize(); });
                 // 添加数据ORM、数据仓储
@@ -83,7 +83,7 @@ namespace Bucket.Admin.Web
                 // 添加事件队列日志和告警信息
                 familyBucket.AddLogEventTransport();
                 // 添加链路追踪
-                familyBucket.AddBucketSkyApmCore().UseEventBusTransport();
+                // familyBucket.AddBucketSkyApmCore().UseEventBusTransport();
                 // 添加缓存组件
                 familyBucket.AddCaching(build =>
                 {
@@ -157,6 +157,8 @@ namespace Bucket.Admin.Web
             app.UseStaticFiles();
             // 路由
             ConfigRoute(app);
+            // 服务注册
+            // app.UseConsulRegisterService(Configuration);
         }
         /// <summary>
         /// 路由配置,支持区域

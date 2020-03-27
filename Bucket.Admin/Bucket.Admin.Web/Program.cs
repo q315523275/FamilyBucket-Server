@@ -1,6 +1,4 @@
-﻿using Bucket.Config;
-using Bucket.Logging;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -22,14 +20,16 @@ namespace Bucket.Admin.Web
                    .ConfigureAppConfiguration((hostingContext, _config) =>
                    {
                        // 从配置中心拉取配置与appsettings.json配置进行合并,可用于组件注册
-                       var option = new BucketConfigOptions();
-                       _config.Build().GetSection("ConfigServer").Bind(option);
-                       _config.AddBucketConfig(option);
+                       // 管理项目从配置文件读取
+                       // var option = new BucketConfigOptions();
+                       // _config.Build().GetSection("ConfigServer").Bind(option);
+                       // _config.AddBucketConfig(option);
                    })
                    .ConfigureLogging((hostingContext, logging) =>
                    {
                        logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging")).ClearProviders()
-                              .AddBucketLog(hostingContext.Configuration.GetValue<string>("Project:Name"));
+                              .AddConsole().AddDebug();
+                       //.AddBucketLog(hostingContext.Configuration.GetValue<string>("Project:Name"));
                    })
                    .UseStartup<Startup>()
                    .Build()

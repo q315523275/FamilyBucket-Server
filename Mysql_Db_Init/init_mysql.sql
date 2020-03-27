@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 192.168.1.168
-Source Server Version : 50710
-Source Host           : 192.168.1.168:3306
-Source Database       : pzsupper
+Source Server         : 10.10.141.116_root_Axon.2016
+Source Server Version : 50706
+Source Host           : 10.10.141.116:3306
+Source Database       : familybucket
 
 Target Server Type    : MYSQL
-Target Server Version : 50710
+Target Server Version : 50706
 File Encoding         : 65001
 
-Date: 2019-02-12 10:59:50
+Date: 2020-03-27 13:32:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -88,7 +88,7 @@ CREATE TABLE `tb_apigateway_config` (
 -- ----------------------------
 -- Records of tb_apigateway_config
 -- ----------------------------
-INSERT INTO `tb_apigateway_config` VALUES ('1', 'Bucket.ApiGateway', '', '', 'requestid', '{\"AllowAutoRedirect\":false,\"UseCookieContainer\":false,\"UseTracing\":false,\"UseProxy\":false}', '{\"Type\":\"RoundRobin\",\"Key\":\"\",\"Expiry\":0}', '{\"ExceptionsAllowedBeforeBreaking\":0,\"DurationOfBreak\":0,\"TimeoutValue\":0}', '{\"Host\":\"192.168.1.54\",\"Port\":8500,\"Type\":\"\",\"Token\":\"\",\"ConfigurationKey\":\"Pinzhi.ApiGateway\",\"PollingInterval\":0}', '{\"ClientIdHeader\":\"ClientId\",\"QuotaExceededMessage\":\"Customize Tips!\",\"RateLimitCounterPrefix\":\"ocelot\",\"DisableRateLimitHeaders\":false,\"HttpStatusCode\":429}');
+INSERT INTO `tb_apigateway_config` VALUES ('1', 'Bucket.ApiGateway', '', '', 'requestid', '{\"AllowAutoRedirect\":false,\"UseCookieContainer\":false,\"UseTracing\":false,\"UseProxy\":false}', '{\"Type\":\"RoundRobin\",\"Key\":\"\",\"Expiry\":0}', '{\"ExceptionsAllowedBeforeBreaking\":0,\"DurationOfBreak\":0,\"TimeoutValue\":0}', '{\"Host\":\"127.0.0.1\",\"Port\":8500,\"Type\":\"\",\"Token\":\"\",\"ConfigurationKey\":\"Pinzhi.ApiGateway\",\"PollingInterval\":0}', '{\"ClientIdHeader\":\"ClientId\",\"QuotaExceededMessage\":\"Customize Tips!\",\"RateLimitCounterPrefix\":\"ocelot\",\"DisableRateLimitHeaders\":false,\"HttpStatusCode\":429}');
 
 -- ----------------------------
 -- Table structure for tb_apigateway_reroute
@@ -124,8 +124,6 @@ CREATE TABLE `tb_apigateway_reroute` (
 -- Records of tb_apigateway_reroute
 -- ----------------------------
 INSERT INTO `tb_apigateway_reroute` VALUES ('1', '1', '/auth/{everyting}', '[\"Post\",\"Get\"]', null, '/{everyting}', 'http', '[{\"Host\":\"192.168.1.52\",\"Port\":18082}]', null, null, null, '1', '0', '{\"IPAllowedList\":[],\"IPBlockedList\":[]}', '{\"TtlSeconds\":0,\"Region\":null}', '{\"AllowAutoRedirect\":false,\"UseCookieContainer\":false,\"UseTracing\":false,\"UseProxy\":false}', '{\"AuthenticationProviderKey\":\"\",\"AllowedScopes\":[]}', '{\"ClientWhitelist\":[],\"EnableRateLimiting\":false,\"Period\":null,\"PeriodTimespan\":0.0,\"Limit\":0}', '{\"Type\":\"RoundRobin\",\"Key\":null,\"Expiry\":0}', '{\"ExceptionsAllowedBeforeBreaking\":0,\"DurationOfBreak\":0,\"TimeoutValue\":0}', '[]', '1');
-INSERT INTO `tb_apigateway_reroute` VALUES ('2', '1', '/platform/{everything}', '[\"Post\",\"Get\"]', null, '/{everything}', 'http', '[{\"Host\":\"192.168.1.53\",\"Port\":18083}]', null, null, null, '0', '0', '{\"IPAllowedList\":[],\"IPBlockedList\":[]}', '{\"TtlSeconds\":0,\"Region\":null}', '{\"AllowAutoRedirect\":false,\"UseCookieContainer\":false,\"UseTracing\":false,\"UseProxy\":true}', '{\"AuthenticationProviderKey\":\"\",\"AllowedScopes\":[]}', '{\"ClientWhitelist\":[],\"EnableRateLimiting\":false,\"Period\":null,\"PeriodTimespan\":0.0,\"Limit\":0}', '{\"Type\":\"RoundRobin\",\"Key\":null,\"Expiry\":0}', '{\"ExceptionsAllowedBeforeBreaking\":0,\"DurationOfBreak\":0,\"TimeoutValue\":0}', '[]', '1');
-INSERT INTO `tb_apigateway_reroute` VALUES ('6', '1', '/tracing/{everyting}', '[\"Get\",\"Post\"]', null, '/{everyting}', 'http', '[{\"Host\":\"192.168.1.53\",\"Port\":18084}]', null, null, null, '0', '0', '{\"IPAllowedList\":[],\"IPBlockedList\":[]}', '{\"TtlSeconds\":0,\"Region\":null}', '{\"AllowAutoRedirect\":false,\"UseCookieContainer\":false,\"UseTracing\":false,\"UseProxy\":false}', '{\"AuthenticationProviderKey\":\"Bucket\",\"AllowedScopes\":[\"admin\"]}', '{\"ClientWhitelist\":[],\"EnableRateLimiting\":false,\"Period\":null,\"PeriodTimespan\":0.0,\"Limit\":0}', '{\"Type\":\"RoundRobin\",\"Key\":\"\",\"Expiry\":0}', '{\"ExceptionsAllowedBeforeBreaking\":0,\"DurationOfBreak\":0,\"TimeoutValue\":0}', '[]', '1');
 INSERT INTO `tb_apigateway_reroute` VALUES ('9', '1', '/configs/{everything}', '[\"Get\",\"Post\"]', null, '/configs/{everything}', 'http', '[{\"Host\":\"192.168.1.53\",\"Port\":18081}]', null, null, null, '0', '0', '{\"IPAllowedList\":[],\"IPBlockedList\":[]}', '{\"TtlSeconds\":0,\"Region\":null}', '{\"AllowAutoRedirect\":false,\"UseCookieContainer\":false,\"UseTracing\":false,\"UseProxy\":false}', '{\"AuthenticationProviderKey\":\"\",\"AllowedScopes\":[]}', '{\"ClientWhitelist\":[],\"EnableRateLimiting\":false,\"Period\":null,\"PeriodTimespan\":0.0,\"Limit\":0}', '{\"Type\":\"RoundRobin\",\"Key\":\"\",\"Expiry\":0}', '{\"ExceptionsAllowedBeforeBreaking\":0,\"DurationOfBreak\":0,\"TimeoutValue\":0}', '[]', '1');
 
 -- ----------------------------
@@ -206,7 +204,11 @@ CREATE TABLE `tb_appconfig_prepro` (
   `Version` bigint(20) NOT NULL,
   `IsDeleted` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tb_appconfig_prepro
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for tb_appconfig_pro
@@ -224,7 +226,11 @@ CREATE TABLE `tb_appconfig_pro` (
   `Version` bigint(20) NOT NULL,
   `IsDeleted` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tb_appconfig_pro
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for tb_appconfig_uat
@@ -242,7 +248,11 @@ CREATE TABLE `tb_appconfig_uat` (
   `Version` bigint(20) NOT NULL,
   `IsDeleted` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tb_appconfig_uat
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for tb_appnamespace
@@ -272,22 +282,24 @@ INSERT INTO `tb_appnamespace` VALUES ('7', 'Pinzhi.BackgroundTasks', 'FamilyBuck
 INSERT INTO `tb_appnamespace` VALUES ('8', 'Pinzhi.Platform.WebApi', 'FamilyBucket', '0', '系统管理平台', '0', '2018-11-20 18:06:39', '1548387601696', '2018-11-20 18:06:39', '1548387601696');
 
 -- ----------------------------
--- Table structure for tb_events
+-- Table structure for tb_logs
 -- ----------------------------
-DROP TABLE IF EXISTS `tb_events`;
-CREATE TABLE `tb_events` (
-  `Id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `Mode` varchar(100) DEFAULT NULL,
-  `EventName` varchar(150) DEFAULT NULL,
-  `EventKey` varchar(150) DEFAULT NULL,
-  `EventCode` varchar(150) DEFAULT NULL,
-  `EventValue` varchar(150) DEFAULT NULL,
-  `UserKey` varchar(50) DEFAULT NULL,
-  `CreateTime` datetime DEFAULT NULL,
-  `Channel` varchar(100) DEFAULT NULL,
-  `Source` varchar(100) DEFAULT NULL,
+DROP TABLE IF EXISTS `tb_logs`;
+CREATE TABLE `tb_logs` (
+  `Id` bigint(20) NOT NULL,
+  `ClassName` varchar(100) DEFAULT NULL,
+  `ProjectName` varchar(100) DEFAULT NULL,
+  `LogTag` varchar(150) DEFAULT NULL,
+  `LogType` varchar(20) DEFAULT NULL,
+  `LogMessage` varchar(5120) DEFAULT NULL,
+  `IP` varchar(20) DEFAULT NULL,
+  `AddTime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1091010230684565505 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tb_logs
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for tb_platform_menus
@@ -322,9 +334,6 @@ INSERT INTO `tb_platform_menus` VALUES ('11', '配置管理', null, '/configServ
 INSERT INTO `tb_platform_menus` VALUES ('12', '微服务管理', 'el-icon-upload', null, '1', '0', '1', '1');
 INSERT INTO `tb_platform_menus` VALUES ('13', '服务管理', null, '/microservice/service', '101', '12', '1', '1');
 INSERT INTO `tb_platform_menus` VALUES ('14', '网关路由', null, '/microservice/route', '100', '12', '1', '1');
-INSERT INTO `tb_platform_menus` VALUES ('15', '链路追踪', null, '/microservice/trace', '102', '12', '1', '1');
-INSERT INTO `tb_platform_menus` VALUES ('16', '访问量统计', null, '/microservice/access', '103', '12', '1', '1');
-INSERT INTO `tb_platform_menus` VALUES ('17', '链路监听', null, '/microservice/traceOnline', '104', '12', '1', '1');
 INSERT INTO `tb_platform_menus` VALUES ('18', '网关配置', null, '/microservice/gateway', '99', '12', '1', '1');
 
 -- ----------------------------
@@ -479,19 +488,6 @@ CREATE TABLE `tb_roles` (
 INSERT INTO `tb_roles` VALUES ('1', 'Pinzhi.Platform.Poc', 'admin', '超级管理员', '平台基础管理/超级管理员', '1', '2018-05-17 10:39:30', '2019-01-28 14:36:52', '0');
 
 -- ----------------------------
--- Table structure for tb_thirdoauths
--- ----------------------------
-DROP TABLE IF EXISTS `tb_thirdoauths`;
-CREATE TABLE `tb_thirdoauths` (
-  `Uid` bigint(20) NOT NULL,
-  `OpenId` varchar(255) NOT NULL,
-  `UnionId` varchar(255) DEFAULT NULL,
-  `AuthServer` varchar(255) NOT NULL,
-  `AppId` varchar(255) DEFAULT NULL,
-  KEY `index_oauth` (`Uid`,`OpenId`,`UnionId`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
 -- Table structure for tb_user_roles
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_user_roles`;
@@ -529,55 +525,3 @@ CREATE TABLE `tb_users` (
 -- Records of tb_users
 -- ----------------------------
 INSERT INTO `tb_users` VALUES ('1548387601696', 'admin', '816c62bc3e1dc540d8a409db908f4829f720ae0c9638b3175c47e1358c114ec8', '田亮', '15155010775', '403305950@qq.com', '1', 'akajdksjjda', '2018-05-10 17:08:33', '2019-01-28 14:37:20');
-
--- ----------------------------
--- Table structure for tb_api_times
--- ----------------------------
-DROP TABLE IF EXISTS `tb_api_times`;
-CREATE TABLE `tb_api_times` (
-  `Id` varchar(50) NOT NULL,
-  `OperationName` varchar(255) DEFAULT NULL,
-  `Duration` bigint(20) DEFAULT NULL,
-  `StartTimestamp` datetime DEFAULT NULL,
-  `FinishTimestamp` datetime DEFAULT NULL,
-  `ServiceName` varchar(255) DEFAULT NULL,
-  `ServiceEnvironment` varchar(50) DEFAULT NULL,
-  `HttpPath` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for tb_bs_logs
--- ----------------------------
-DROP TABLE IF EXISTS `tb_bs_logs`;
-CREATE TABLE `tb_bs_logs` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `TraceId` varchar(100) DEFAULT NULL,
-  `SpanId` varchar(100) DEFAULT NULL,
-  `OperationName` varchar(150) DEFAULT NULL,
-  `Duration` float(20,3) DEFAULT NULL,
-  `StartTimestamp` datetime DEFAULT NULL,
-  `FinishTimestamp` datetime DEFAULT NULL,
-  `ServiceName` varchar(100) DEFAULT NULL,
-  `HttpUrl` varchar(500) DEFAULT NULL,
-  `HttpMethod` varchar(50) DEFAULT NULL,
-  `HttpRequest` varchar(5120) DEFAULT NULL,
-  `HttpResponse` varchar(5120) DEFAULT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for tb_logs
--- ----------------------------
-DROP TABLE IF EXISTS `tb_logs`;
-CREATE TABLE `tb_logs` (
-  `Id` bigint(20) NOT NULL,
-  `ClassName` varchar(100) DEFAULT NULL,
-  `ProjectName` varchar(100) DEFAULT NULL,
-  `LogTag` varchar(150) DEFAULT NULL,
-  `LogType` varchar(20) DEFAULT NULL,
-  `LogMessage` varchar(5120) DEFAULT NULL,
-  `IP` varchar(20) DEFAULT NULL,
-  `AddTime` datetime DEFAULT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
